@@ -23,7 +23,6 @@ public class LoginController {
 	 */
 	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
 	public String login() {
-		System.out.println("요");
 		return "login";
 	}
 	
@@ -32,7 +31,6 @@ public class LoginController {
 	 */
 	@RequestMapping(value = "/loginProcess.do", method = RequestMethod.POST)
 	public String loginProcess(@RequestParam String id, HttpServletRequest request) {
-		System.out.println("왜?");
 		logger.info("Welcome "+id);
 		
     	HttpSession session = request.getSession();
